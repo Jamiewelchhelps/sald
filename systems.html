@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Slade Technologies</title>
+  <title>Systems — Slade Technologies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Syncopate:wght@400;700&display=swap">
@@ -15,7 +15,7 @@
       <a class="brand-link" href="index.html"><span class="brand-mark">SLADE TECHNOLOGIES</span></a>
       <button class="nav-toggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></button>
       <div id="primary-nav" class="nav-links">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="systems.html">Systems</a><a href="updates.html">Updates</a><a href="contact.html" class="active">Contact</a><a href="talent.html">Careers</a><a href="founder.html">Founder</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="systems.html" class="active">Systems</a><a href="updates.html">Updates</a><a href="contact.html">Contact</a><a href="talent.html">Careers</a><a href="founder.html">Founder</a>
       </div>
     </nav>
   </header>
@@ -23,36 +23,32 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">Contact</span>
-        <h1>Get in touch.</h1>
-        <p>For partnerships, investment, press, or general inquiries.</p>
+        <span class="eyebrow">Named Programs</span>
+        <h1>Systems</h1>
+        <p>Concept designs in active development.</p>
       </div>
     </section>
 
     <section style="padding-top:0;">
       <div class="container">
-        <form class="form" data-contact-form novalidate>
-          <div class="form-row">
-            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
-            <div class="field"><label for="org">Organization</label><input id="org" name="org" type="text" autocomplete="organization" /></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-            <div class="field">
-              <label for="topic">Topic</label>
-              <select id="topic" name="topic">
-                <option>Partnership</option>
-                <option>Investment</option>
-                <option>Careers</option>
-                <option>Press</option>
-                <option>General</option>
-              </select>
+        <div class="program-grid">
+          <a class="program-card" href="systems/st-1.html">
+            <div class="img-fallback" aria-hidden="true"></div>
+            <div class="scrim" aria-hidden="true"></div>
+            <div class="meta">
+              <div><div class="kicker">Aircraft · UCAV</div><h3>ST-1 Specter</h3></div>
+              <span class="view">View</span>
             </div>
-          </div>
-          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
-          <div><button type="submit" class="btn-glass">Send</button></div>
-          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        </form>
+          </a>
+          <a class="program-card" href="systems/helius-1.html">
+            <div class="img-fallback" aria-hidden="true" style="background: linear-gradient(135deg,#101018,#1f1f2c 50%,#0a0a10);"></div>
+            <div class="scrim" aria-hidden="true"></div>
+            <div class="meta">
+              <div><div class="kicker">Spacecraft · Solar Array</div><h3>Helius 1</h3></div>
+              <span class="view">View</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </main>

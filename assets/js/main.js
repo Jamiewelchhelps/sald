@@ -4,9 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggle && links) {
     toggle.addEventListener("click", () => {
       links.classList.toggle("open");
-      const expanded = links.classList.contains("open");
-      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.setAttribute("aria-expanded", String(links.classList.contains("open")));
     });
+  }
+
+  const header = document.querySelector("[data-header]");
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
   const form = document.querySelector("[data-contact-form]");
@@ -15,13 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const status = form.querySelector("[data-form-status]");
       if (status) {
-        status.textContent = "Thanks — we'll be in touch within one business day.";
-        status.style.color = "var(--brand-2)";
+        status.textContent = "Thanks — we'll be in touch.";
+        status.style.color = "var(--accent)";
       }
       form.reset();
     });
   }
 
-  const yearEl = document.querySelector("[data-year]");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  document.querySelectorAll("[data-year]").forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
 });

@@ -64,6 +64,7 @@ p { margin: 0 0 1em; color: var(--ink-600); line-height: 1.7; }
 }
 .brand-link { display: flex; align-items: center; gap: .6rem; }
 .brand-link:hover { opacity: .7; }
+.brand-logo { width: 28px; height: 28px; color: var(--ink); display: block; }
 .brand-mark {
   font-family: var(--font-display);
   font-weight: 700;
@@ -72,6 +73,7 @@ p { margin: 0 0 1em; color: var(--ink-600); line-height: 1.7; }
   color: var(--ink);
 }
 .brand-mark.invert { color: #fff; }
+.site-header.scrolled .brand-logo { color: var(--ink); }
 
 .nav-links { display: flex; align-items: center; gap: 0; }
 .nav-links a {
@@ -156,10 +158,10 @@ p { margin: 0 0 1em; color: var(--ink-600); line-height: 1.7; }
   overflow: hidden;
 }
 
-/* Diagonal "beams" — multiple slabs at ~65deg with soft glow */
+/* Diagonal "beams" — wide slabs at ~65deg, weighted left of centre */
 .hero-beams {
   position: absolute;
-  inset: -20%;
+  inset: -25%;
   transform: rotate(-65deg);
   transform-origin: center center;
   pointer-events: none;
@@ -172,26 +174,24 @@ p { margin: 0 0 1em; color: var(--ink-600); line-height: 1.7; }
     linear-gradient(
       90deg,
       transparent 0%,
-      rgba(255,255,255,0.03) 18%,
-      rgba(255,255,255,0.10) 50%,
-      rgba(255,255,255,0.03) 82%,
+      rgba(255,255,255,0.04) 12%,
+      rgba(255,255,255,0.16) 50%,
+      rgba(255,255,255,0.04) 88%,
       transparent 100%
     );
-  filter: blur(1px);
   mix-blend-mode: screen;
 }
 .beam::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(60% 80% at 50% 50%, rgba(255,255,255,0.06), transparent 70%);
+  background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
 }
-.beam-1 { left: 8%;  width: 320px; opacity: 0.95; }
-.beam-2 { left: 24%; width: 220px; opacity: 0.75; }
-.beam-3 { left: 38%; width: 380px; opacity: 0.85; }
-.beam-4 { left: 60%; width: 200px; opacity: 0.55; }
-.beam-5 { left: 74%; width: 280px; opacity: 0.7;  }
-.beam-6 { left: 90%; width: 140px; opacity: 0.45; }
+.beam-1 { left: 4%;  width: 180px; opacity: 0.55; }
+.beam-2 { left: 16%; width: 360px; opacity: 0.95; }
+.beam-3 { left: 36%; width: 460px; opacity: 1;    }
+.beam-4 { left: 60%; width: 220px; opacity: 0.45; }
+.beam-5 { left: 80%; width: 320px; opacity: 0.55; }
 
 .hero-grid {
   position: absolute;
@@ -248,30 +248,12 @@ p { margin: 0 0 1em; color: var(--ink-600); line-height: 1.7; }
   white-space: nowrap;
 }
 
-/* Stylized wordmark — italic + swoosh, replace with <img> of real logo when available */
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: .5em;
-  color: #fff;
-  white-space: nowrap;
-}
-.wordmark-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: 0.02em;
-  font-size: clamp(1.25rem, 4.6vw, 3.8rem);
-  line-height: 1;
-  text-transform: uppercase;
-  transform: skewX(-6deg);
-}
-.wordmark-swoosh {
-  width: clamp(1.6rem, 4.8vw, 3.6rem);
+/* Hero logo (large) */
+.hero-logo {
+  display: block;
+  width: clamp(160px, 22vw, 360px);
   height: auto;
   color: #fff;
-  flex-shrink: 0;
-  margin-left: -0.1em;
 }
 
 .beams-bottom {

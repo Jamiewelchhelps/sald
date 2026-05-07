@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Slade Technologies</title>
+  <title>Palindrome Systems</title>
   <meta name="description" content="Aerospace and defense company specializing in the design, development, and manufacturing of aircraft systems, spacecraft, space launch vehicles, and guided missiles." />
   <meta name="keywords" content="aerospace,defense,aircraft systems,spacecraft,launch vehicles,guided missiles" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Syncopate:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -37,15 +37,16 @@
     <!-- Hero -->
     <section class="hero" style="border:0; padding:0;">
       <div class="hero-bg" aria-hidden="true">
-        <div class="hero-grid"></div>
-        <div class="hero-beams">
-          <div class="beam beam-1"></div>
-          <div class="beam beam-2"></div>
-          <div class="beam beam-3"></div>
-          <div class="beam beam-4"></div>
-          <div class="beam beam-5"></div>
-        </div>
-        <div class="hero-vignette"></div>
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <noscript>
+          <div class="hero-grid"></div>
+          <div class="hero-beams">
+            <div class="beam beam-1"></div><div class="beam beam-2"></div>
+            <div class="beam beam-3"></div><div class="beam beam-4"></div>
+            <div class="beam beam-5"></div>
+          </div>
+          <div class="hero-vignette"></div>
+        </noscript>
       </div>
       <div class="beams-hud">
         <div></div>
@@ -55,9 +56,9 @@
         <div class="beams-bottom">
           <div class="beams-meta">
             <div>[ EST. 2026 ]</div>
-            <div>AEROSPACE · DEFENSE · DOMESTIC PRODUCTION</div>
+            <div>PLACEHOLDER · TAGLINE · HERE</div>
           </div>
-          <a class="beams-cta" href="capabilities.html">EXPLORE CAPABILITIES</a>
+          <a class="beams-cta" href="capabilities.html">EXPLORE</a>
         </div>
       </div>
       <div class="hero-tick" aria-hidden="true"></div>
@@ -68,28 +69,28 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Core Domains</span>
-          <h2 class="section-title">Four Domains.<br/>One Direction.</h2>
+          <h2 class="section-title">Core Capabilities.<br/>One Mission.</h2>
         </div>
         <div class="domain-grid">
           <a class="domain-card" href="capabilities.html">
             <h3>Aircraft Systems</h3>
-            <p>Fixed-wing, rotary, and unmanned platforms engineered for cost efficiency: lean manufacturing, advanced aerodynamics, and full-spectrum avionics from the ground up.</p>
+            <p>Fixed-wing, rotary, and unmanned aircraft built around lean production, modern aerodynamics, and avionics designed in-house.</p>
           </a>
           <a class="domain-card" href="capabilities.html">
             <h3>Spacecraft</h3>
-            <p>LEO reconnaissance and orbital vehicles built lean, with precision and endurance through domestic supply chains and cost-efficient manufacturing.</p>
+            <p>Low-Earth-orbit reconnaissance and orbital vehicles delivered through a domestic supply chain and tight manufacturing cost discipline.</p>
           </a>
           <a class="domain-card" href="capabilities.html">
             <h3>Launch Vehicles</h3>
-            <p>Orbital and suborbital launch built around reusability and low-cost access to space, from micro-launchers to heavy-lift.</p>
+            <p>Reusable orbital and suborbital launch — from micro-launchers up through heavy-lift — built for low-cost access to space.</p>
           </a>
           <a class="domain-card" href="capabilities.html">
             <h3>Guided Missiles</h3>
-            <p>Precision guided munitions designed from the ground up: affordable seekers, propulsion, and fire control for the next generation of defense.</p>
+            <p>Precision-guided munitions designed end to end, with affordable seekers, propulsion, and fire-control for next-generation defense.</p>
           </a>
         </div>
         <a class="link-arrow" href="capabilities.html">
-          View All Capabilities
+          View capabilities
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
       </div>
@@ -100,16 +101,16 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Named Programs</span>
-          <h2 class="section-title">Concept Designs<br/><span class="muted">In Development.</span></h2>
+          <h2 class="section-title">Programs<br/><span class="muted">In Development.</span></h2>
         </div>
         <div class="program-grid">
-          <a class="program-card" href="systems/st-1.html" aria-label="ST-1 Specter">
+          <a class="program-card" href="systems/program-one.html" aria-label="Program One">
             <div class="img-fallback" aria-hidden="true"></div>
             <div class="scrim" aria-hidden="true"></div>
             <div class="meta">
               <div>
-                <div class="kicker">Aircraft · UCAV</div>
-                <h3>ST-1 Specter</h3>
+                <div class="kicker">Program · 01</div>
+                <h3>Program One</h3>
               </div>
               <span class="view">
                 View
@@ -117,13 +118,13 @@
               </span>
             </div>
           </a>
-          <a class="program-card" href="systems/helius-1.html" aria-label="Helius 1">
+          <a class="program-card" href="systems/program-two.html" aria-label="Program Two">
             <div class="img-fallback" aria-hidden="true" style="background: linear-gradient(135deg,#101018,#1f1f2c 50%,#0a0a10), repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 12px); background-blend-mode: overlay;"></div>
             <div class="scrim" aria-hidden="true"></div>
             <div class="meta">
               <div>
-                <div class="kicker">Spacecraft · Solar Array</div>
-                <h3>Helius 1</h3>
+                <div class="kicker">Program · 02</div>
+                <h3>Program Two</h3>
               </div>
               <span class="view">
                 View
@@ -133,7 +134,7 @@
           </a>
         </div>
         <a class="link-arrow" href="systems.html">
-          All Programs
+          All programs
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(-45deg)"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
       </div>
@@ -144,9 +145,9 @@
       <div class="container split">
         <div>
           <span class="eyebrow">Our Mission</span>
-          <h2 class="section-title">Defense Shouldn't Cost<br/>A Billion To Enter.</h2>
-          <p>Slade Technologies is building high-performance aerospace and defense systems from low-cost materials and lean manufacturing principles. The model is straightforward: engineer from first principles, move fast, and deliver capable systems at a cost that actually makes sense.</p>
-          <p class="fine">Founder-led, domestically focused, and transparent about where we stand. A clear roadmap and the conviction to execute it.</p>
+          <h2 class="section-title">[ Your headline here. ]</h2>
+          <p>Palindrome Systems is building high-performance aerospace and defense systems from low-cost materials and lean manufacturing principles. The model is straightforward: engineer from first principles, move fast, and deliver capable systems at a cost that actually makes sense.</p>
+          <p class="fine">Founder-led, domestic, and transparent. A clear roadmap, and the conviction to execute it.</p>
           <a class="link-arrow" href="about.html" style="margin-top:1.5rem;">
             About the Company
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(-45deg)"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -161,8 +162,8 @@
       <div class="container">
         <div class="cta">
           <span class="eyebrow">Work With Us</span>
-          <h2>Be Part of<br/>What's Next.</h2>
-          <p>We're open to conversations with partners, investors, and future teammates who believe defense innovation shouldn't be reserved for billion-dollar contractors.</p>
+          <h2>Work With Us.</h2>
+          <p>Talking to partners, investors, and future teammates who think defense innovation shouldn't only happen inside billion-dollar primes.</p>
           <div class="cta-row">
             <a href="contact.html" class="btn-glass">Get in Touch</a>
             <a href="about.html" class="text-link">Learn More →</a>
@@ -177,7 +178,7 @@
       <div class="footer-brand">
         <a class="brand-link" href="index.html"><svg class="brand-logo" viewBox="-100 -100 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="miter"><polygon points="86.6,23.3 63.6,63.6 23.3,86.6 -23.3,86.6 -63.6,63.6 -86.6,23.3 -86.6,-23.3 -63.6,-63.6 -23.3,-86.6 23.3,-86.6 63.6,-63.6 86.6,-23.3"/><g><path d="M 0,-62 L 30,-44 L 30,-14 L 8,-14 L 8,-32 L 0,-37 L -8,-32 L -8,-14 L -30,-14 L -30,-44 Z"/><path d="M 0,-62 L 30,-44 L 30,-14 L 8,-14 L 8,-32 L 0,-37 L -8,-32 L -8,-14 L -30,-14 L -30,-44 Z" transform="rotate(72)"/><path d="M 0,-62 L 30,-44 L 30,-14 L 8,-14 L 8,-32 L 0,-37 L -8,-32 L -8,-14 L -30,-14 L -30,-44 Z" transform="rotate(144)"/><path d="M 0,-62 L 30,-44 L 30,-14 L 8,-14 L 8,-32 L 0,-37 L -8,-32 L -8,-14 L -30,-14 L -30,-44 Z" transform="rotate(216)"/><path d="M 0,-62 L 30,-44 L 30,-14 L 8,-14 L 8,-32 L 0,-37 L -8,-32 L -8,-14 L -30,-14 L -30,-44 Z" transform="rotate(288)"/></g></g></svg></a>
         <p>Aerospace and defense systems for commercial and government clients. Aircraft, spacecraft, launch vehicles, and guided missiles.</p>
-        <span class="footer-status">Currently in Development</span>
+        <span class="footer-status">In Development</span>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -193,7 +194,7 @@
         <div class="footer-col">
           <h4>Systems</h4>
           <ul>
-            <li><a href="systems/st-1.html">ST-1 Specter</a></li>
+            <li><a href="systems/program-one.html">Program One</a></li>
             <li><a href="capabilities.html">Aircraft</a></li>
             <li><a href="capabilities.html">Spacecraft</a></li>
             <li><a href="capabilities.html">Launch Vehicles</a></li>
@@ -203,9 +204,11 @@
       </div>
     </div>
     <div class="footer-graphic" aria-hidden="true"></div>
-    <div class="copyright">© <span data-year>2026</span> Slade Technologies LLC</div>
+    <div class="copyright">© <span data-year>2026</span> Palindrome Systems LLC</div>
   </footer>
 
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="assets/js/hero.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
